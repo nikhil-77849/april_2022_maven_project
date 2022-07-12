@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Practice Suite">
+    <test name="Sanity Test">
+        <parameter name="emailId" value="testology.qa.learning@gmail.com"/>
+        <parameter name="password" value="Testology@123"/>
+        <classes>
+            <class name="com.testology.tests.Page_Object_model_LoginLogOutTest"/>
+
+        </classes>
+
+    </test> <!-- Test -->
+    <test name ="Test with Data provider">
+        <classes>
+
+       <!--     <class name="com.testology.tests.LoginLogOutTest_Data_Provider"/>-->
+        </classes>
+    </test>
+</suite> <!-- Suite -->

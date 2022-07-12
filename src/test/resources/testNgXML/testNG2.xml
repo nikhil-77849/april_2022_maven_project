@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="test_suite">
+
+    <test name="Personal Loan">
+        <groups>
+            <run>
+                <include name="Regression"/>
+                <exclude name="exclude_test_group" />
+            </run>
+        </groups>
+        <classes>
+            <class name="com.testology.tests.Personal_loan"/>
+        </classes>
+    </test> <!-- Test -->
+    <test name="Home Loan">
+        <groups>
+            <run>
+                <include name="Regression"/>
+                <exclude name="exclude_test_group" />
+            </run>
+        </groups>
+        <classes>
+            <class name="com.testology.tests.Home_loan"/>
+        </classes>
+    </test> <!-- Test -->
+    <test name="Car Loan">
+
+        <groups>
+            <run>
+                <include name="Regression"/>
+                <exclude name="exclude_test_group" />
+            </run>
+        </groups>
+        <classes>
+            <class name="com.testology.tests.Car_loan"/>
+        </classes>
+    </test> <!-- Test -->
+</suite> <!-- Suite -->
