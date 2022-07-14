@@ -26,6 +26,7 @@ public class LoginLogOutTest  extends TestBase {
     public void verify_user_is_able_to_login_with_valid_credentials() throws InterruptedException {
 
     driver.get("https://test.techlift.in/login#login");
+        System.out.println("Navigating to https://test.techlift.in/login#login");
     Thread.sleep(5000);
         WebElement email=driver.findElement(By.xpath("//input[@id='login_email']"));
 
@@ -35,6 +36,7 @@ public class LoginLogOutTest  extends TestBase {
         email.sendKeys("testology.qa.learning@gmail.com");
         password.sendKeys("Testology@123");
         loginBtn.click();
+        System.out.println("Clicked on test.techlift.in login button");
     Thread.sleep(5000);
         WebElement settingsDropDown=driver.findElement(By.xpath("//a//span[contains(text(),'Settings')]"));
         Assert.assertTrue(settingsDropDown.isDisplayed());// assertion to check whether the settings dropdown is displayed
@@ -42,10 +44,11 @@ public class LoginLogOutTest  extends TestBase {
 
     WebElement stockDropDownElement=driver.findElement(By.xpath("//div[contains(@data-module-name,'Stock')]"));
     stockDropDownElement.click();
+        System.out.println("clicked on stockDropDownElement");
     Thread.sleep(5000);
     WebElement stockPageTitle=driver.findElement(By.xpath("//div[contains(@class,'title') and text()='Stock']"));
     Assert.assertTrue(stockPageTitle.isDisplayed());// assertion to check whether the settings dropdown is displayed
-
+        System.out.println("Assertion Passed");
 }
 
     @AfterTest
